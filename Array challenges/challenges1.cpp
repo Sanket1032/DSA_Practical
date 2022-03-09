@@ -1,0 +1,47 @@
+#include <iostream>
+#include <climits>
+using namespace std;
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     int arr[n];
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     int maximum = INT_MIN;
+//     for (int j = 0; j <n ; j++)
+//     {
+//         maximum = max(maximum, arr[j]);
+//     }
+//     cout << maximum << " ";
+
+//     return 0;
+// }
+
+// Adding all the subarrays
+int main()
+{
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        int sum = 0;
+        for (int j = i; j < n; j++)
+        {
+            sum += arr[j];
+            cout << sum << endl;
+        }
+    }
+
+    return 0;
+}
